@@ -4,7 +4,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #0077ff; /*Background color changed*/
+  background-color: #00f2ff; /*Background color changed*/
   color: #333;
 }
 body.dark-mode {
