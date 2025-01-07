@@ -1,15 +1,15 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mikel Portfolio</title>
+  <title>Mikel's Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
       <div class="container">
-        <h1>Mikel Portfolio</h1>
+        <h1>Mikel Lewis Portfolio</h1>
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
@@ -21,50 +21,95 @@
       </div>
     </header>
     
-    <section id="about">
-        <div class="container">
-        <h2>About Me</h2>
-        <p> My name is Mikel Lewis, and I am a Computer Science student passionate about technology and innovation. My interests lie in software development, web design, and problem-solving. I enjoy building applications that simplify everyday tasks and improve user experiences. </p>
+<!-- About Me Section -->
+<section id="about">
+  <h2>About Me</h2>
+  
+  <div class="about-container">
+    <!-- Left side (Image and Button) -->
+    <div class = "about-left">
+      <div class = "about-image-container">
+        <img src = "IMG_2554 (1).jpg" alt="Mikel Lewis" class="about-image">
       </div>
-    </section>
-    <section id="skills">
-      <div class="container">
-      <h2>Skills</h2>
-      <u1>
-        <li>C++</li> 
-        <li>Python</li>
+      <div class="resume-button-container">
+        <a href="https://drive.google.com/file/d/1HGUPq3BAT4rb5RT7u_a3lgAfEGazo8CP/view?usp=sharing" target="_blank" class="resume-button">My Resume</a>
+      </div>
+    </div>
+
+    <!-- Right side (Text) -->
+    <div class="about-right">
+      <div class="about-content">
+        <p>My name is Mikel Lewis, and I am a Computer Science student passionate about technology and innovation. My interests lie in software development, web design, and problem-solving. I enjoy building applications that simplify everyday tasks and improve user experiences.
+           I am a passionate web developer with experience in creating interactive websites and applications.
+           My expertise includes HTML, CSS, JavaScript, and other modern web technologies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Skills Section -->
+<section id="skills">
+  <h2>My Skills</h2>
+
+  <div class="skills-container">
+    <!-- Left side (Skills List) -->
+    <div class="skills-list">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
         <li>JavaScript</li>
-      </u1>
-      </div>
-    </section>
+        <li>React</li>
+        <li>Git</li>
+      </ul>
+    </div>
+
+    <!-- Right side (Image) -->
+    <div class="skills-image-container">
+      <img src="Coding IMG.png" alt="Skills Image" class="skills-image" id="skillImage">
+    </div>
+  </div>
+</section>
+
+<!-- Modal to display fullscreen image -->
+<div id="imageModal" class="modal">
+  <span class="close" id="closeModal">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+</section>
     <section id="projects">
         <div class="container">
           <h2>My Projects</h2>
           <div class="project-grid">
             <div class="project">
-              <h3>Project 1</h3>
-              <p>A C++ program of the game Wordle where the player is given a five letter word to guess within five tries. <a href="#" target="_blank">View Project</a></p>
+              <h3>Project 1: Wordle Game</h3>
+              <p>A C++ program of the game Wordle where the player is given a five-letter word to guess within five tries. <a href="#" target="_blank">View Project</a></p>
             </div>
             <div class="project">
-              <h3>Project 2</h3>
-              <p>A brief description of the project. <a href="#" target="_blank">View Project</a></p>
+              <h3>Project 2: Personal Portfolio</h3>
+              <p>This website you're viewing! A personal portfolio built using HTML, CSS, and JavaScript. <a href="#" target="_blank">View Project</a></p>
             </div>
           </div>
         </div>
-      </section>
+    </section>
       
-      <section id="contact">
+    <section id="contact">
         <div class="container">
           <h2>Contact Me</h2>
-          <p>Feel free to reach out for collaborations or just to say hi!</p>
-          <p>Email: <a href="mailto:yourname@youremail.com">mikellewism@gmail.com</a></p>
+          <div class="contact-content">
+            <p>Feel free to reach out for collaborations or just to say hi!</p>
+            <p>Email: <a href="mailto:mikellewism@gmail.com">mikellewism@gmail.com</a></p>
+          </div>
         </div>
-      </section>
+    </section>
       
-      <footer>
-        <div class="container">
-          <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
-        </div>
-      </footer>
-      </body>
-      </html>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Mikel Lewis. All Rights Reserved.</p>
+      </div>
+    </footer>
+  
+    <script src="script.js"></script>
+</body>
+</html>

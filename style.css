@@ -1,17 +1,16 @@
 /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Gill Sans", sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #68f7ff; /*Background color changed*/
+  background-color: #f4f4f4;
   color: #333;
 }
-body.dark-mode {
-  background-color: black;
-  color: white;
-}
-
 
 .container {
   width: 80%;
@@ -21,93 +20,348 @@ body.dark-mode {
 
 /* Header */
 header {
-  background-color: #0073e6;
-  color: #fff;
-  border: 2.5px solid #333;
-  padding: 20px 0;
+  background-color: #333;
+  color: #FFD700; /* Change header text color to yellow */
+  padding: 1rem 0;
+  margin-bottom: 2rem; /* Add space below the header */
 }
 
 header h1 {
-  margin: 0;
   text-align: center;
-  font-family: cursive;
+  font-size: 2.5rem;
+  font-family: cursive; /* Change the font to Gill Sans */
 }
 
-h2 {
-  color: #003366;
-}
-
+/* Navigation as Buttons */
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 0;
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 nav ul li a {
-  color: #fff;
+  text-decoration: none;
+  color: #FFD700; /* Set text color to yellow for links */
+  font-size: 1.2rem;
+  padding: 10px 20px; /* Add padding to make them look like buttons */
+  border-radius: 5px; /* Round the corners */
+  background-color: #555; /* Default button color */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+nav ul li a:hover {
+  color: #fff; /* Ensure text stays white on hover */
+  background-color: #FFD700; /* Button color on hover */
+  transform: scale(1.05); /* Slight scale effect for hover */
+}
+
+nav ul li a:active {
+  background-color: #FFCC00; /* Button color on active click */
+  transform: scale(0.98); /* Slight shrinking effect when clicked */
+}
+
+/* Section Styles */
+section {
+  padding: 4rem 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* White Boxes for Specific Sections */
+#contact {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 60%; /* Smaller width */
+  margin-bottom: 2rem; /* Add space below the Contact box */
+}
+
+/* About Me Section Layout */
+#about {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 60%; /* Smaller width */
+  margin-bottom: 2rem; /* Add space below the About Me box */
+}
+
+/* Styling the "About Me" Header */
+#about h2 {
+  background-color: #efefef; /* Yellow background */
+  color: #000000; /* Text color */
+  padding: 0.5rem 1rem; /* Reduced padding to make the box smaller */
+  border: 2px solid #000000; /* Gray border around the header */
+  border-radius: 5px; /* Rounded corners for the box */
+  text-align: center; /* Center align the text */
+  font-size: 1.5rem; /* Smaller font size */
+  margin: 0 auto 1rem auto; /* Center the box horizontally and space below it */
+  width: fit-content; /* Makes the box width adjust to content */
+}
+
+/* About Me Section */
+.about-container {
+  display: flex;
+  justify-content: space-between; /* Space between the left and right sides */
+  align-items: flex-start; /* Align items to the top */
+  margin-top: 2rem; /* Add some space at the top of the section */
+}
+
+.about-left {
+  width: 40%; /* Left side takes up 40% of the container */
+  text-align: center; /* Center the content inside */
+}
+
+.about-right {
+  width: 55%; /* Right side takes up 55% of the container */
+}
+
+.about-image-container {
+  margin-bottom: 1.5rem; /* Add space below the image */
+}
+
+.about-image {
+  width: 250px; /* Increased size of the image */
+  height: 250px; /* Increased size to maintain square shape */
+  object-fit: cover; /* Ensures the image fills the square without distortion */
+  border: 5px solid #FFD700; /* Optional: Add a golden border around the image */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.about-image:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.resume-button-container {
+  margin-top: 1.5rem; /* Space above the resume button */
+}
+
+.resume-button {
+  text-decoration: none;
+  color: #fff; /* Button text color */
+  background-color: #FFD700; /* Button color */
+  padding: 12px 24px; /* Add padding to make it look like a button */
+  border-radius: 5px; /* Round the corners */
+  font-size: 1.2rem; /* Button text size */
+  font-weight: bold; /* Make text bold */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.resume-button:hover {
+  background-color: #FFCC00; /* Button color on hover */
+  transform: scale(1.05); /* Slight scale effect when hovering */
+}
+
+.resume-button:active {
+  background-color: #FF9900; /* Button color when clicked */
+  transform: scale(0.98); /* Slight shrinking effect when clicked */
+}
+
+.about-content {
+  padding-left: 2rem; /* Add space between the text and the left side */
+}
+
+/* Skills Section Layout */
+#skills {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 60%; /* Smaller width */
+  margin-top: 2rem; /* Add space above the Skills box */
+}
+
+/* Styling the "My Skills" Header */
+#skills h2 {
+  background-color: #efefef; /* Yellow background */
+  color: #000000; /* Text color */
+  padding: 0.5rem 1rem; /* Reduced padding to make the box smaller */
+  border: 2px solid #000000; /* Gray border around the header */
+  border-radius: 5px; /* Rounded corners for the box */
+  text-align: center; /* Center align the text */
+  font-size: 1.8rem; /* Smaller font size */
+  margin: 0 auto 1rem auto; /* Center the box horizontally and space below it */
+  width: fit-content; /* Makes the box width adjust to content */
+}
+
+/* Skills Section Layout */
+.skills-container {
+  display: flex;
+  justify-content: space-between; /* Space between the skills list and the image */
+  align-items: center; /* Align items vertically centered */
+  margin-top: 2rem; /* Add some space at the top */
+}
+
+.skills-list {
+  width: 60%; /* Skills list takes up 60% of the container */
+}
+
+.skills-list ul {
+  padding-left: 20px; /* Add space before the bullet points */
+}
+
+.skills-list li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  list-style-type: disc; /* Re-enable bullet points */
+}
+
+.skills-image-container {
+  width: 35%; /* Image container takes up 35% of the container */
+  text-align: center; /* Center the image */
+}
+
+.skills-image {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add border radius to the image */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+  cursor: pointer; /* Change the cursor to indicate it's clickable */
+}
+
+.skills-image:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Position it fixed at the top */
+  z-index: 1; /* Sit on top of the page content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Background with transparency */
+  overflow: auto; /* Enable scrolling if needed */
+  justify-content: center; /* Center the content */
+  align-items: center; /* Center the content vertically */
+}
+
+/* Modal Image */
+.modal-content {
+  max-width: 90%; /* Make the image fit the screen */
+  max-height: 90%; /* Keep the image inside the screen */
+  margin: auto;
+  border-radius: 8px; /* Optional: Rounded corners for the image */
+}
+
+/* Close Button */
+.close {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #FFD700;
+}
+
+/* Projects Section */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create exactly two equal columns */
+  gap: 30px; /* Space between project boxes */
+  margin: 0 auto; /* Center the grid container */
+  max-width: 900px; /* Optional: Set a max width for the grid (adjust as needed) */
+  justify-items: center; /* Center the project boxes horizontally */
+  margin-bottom: 2rem; /* Space below the projects section */
+}
+
+/* Individual Project Box */
+.project {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Ensure even spacing between title, description, etc. */
+  width: 100%; /* Ensure project box takes full width of the grid cell */
+}
+
+#projects h2 {
+  background-color: #efefef; /* Dark background */
+  color: #000000; /* White text color */
+  padding: 0.5rem 1rem; /* Reduced padding to make the box smaller */
+  border: 2px solid #000000; /* Yellow border around the header */
+  border-radius: 5px; /* Rounded corners for the box */
+  text-align: center; /* Center align the text */
+  font-size: 1.8rem; /* Smaller font size */
+  margin: 0 auto 1rem auto; /* Center the box horizontally and space below it */
+  width: fit-content; /* Makes the box width adjust to content */
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project a {
+  color: #333;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Sections */
-section {
-  padding: 20px 0;
-  margin: 20px 0;
-  background: rgba(249, 249, 249, 0.9);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.project a:hover {
+  color: #FFD700;
 }
-
-section h2 {
+/* Resume Button */
+.resume-button-container {
   text-align: center;
-  color: #0073e6;
+  margin-top: 2rem; /* Add space above the button */
 }
 
-#about p, #contact p {
+/* Contact Section Layout */
+.contact-content {
   text-align: center;
+  font-size: 1.2rem;
 }
 
-/* Projects Grid */
-.project-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+#contact h2 {
+  background-color: #efefef; /* Dark background */
+  color: #000000; /* White text color */
+  padding: 0.5rem 1rem; /* Reduced padding to make the box smaller */
+  border: 2px solid #000000; /* Yellow border around the header */
+  border-radius: 5px; /* Rounded corners for the box */
+  text-align: center; /* Center align the text */
+  font-size: 1.8rem; /* Smaller font size */
+  margin: 0 auto 1rem auto; /* Center the box horizontally and space below it */
+  width: fit-content; /* Makes the box width adjust to content */
 }
-
-.project {
-  background: rgba(249, 249, 249, 0.9); 
-  border: 1px solid #333;
-  padding: 15px;
-  border-radius: 8px;
-  width: 30%;
-  text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-.project h3 {
-  margin-top: 0;
-  color: #333;
-}
-
-.project a {
-  color: #0073e6;
-  text-decoration: none;
-}
-
 /* Footer */
 footer {
-  text-align: center;
-  background: #0073e6;
+  background-color: #333;
   color: #fff;
-  padding: 10px 0;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem; 
 }
 
 footer p {
-  margin: 0;
+  font-size: 1rem;
 }
-
